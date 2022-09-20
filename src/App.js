@@ -5,7 +5,8 @@ import Main from './pages/main';
 import Money from './pages/money';
 import Fitness from './pages/fitness';
 import WIP from "./pages/wip";
-import Todo from './pages/todo'
+import Todo from './pages/todo';
+import TherapyNotes from "./pages/therapy-notes";
 
 const App = () => {
     return(
@@ -16,6 +17,7 @@ const App = () => {
                 <Route path="/wip" component={WIP}/>
                 <Route path="/calendar" component={Calendar}/>
                 <Route path="/todo" component={Todo}/>
+                <Route path="/therapy-notes" component={TherapyNotes}/>
                 <Route path="/" component={Main}/>
             </Switch>
         </Router>
