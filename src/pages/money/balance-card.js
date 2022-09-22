@@ -33,7 +33,7 @@ const BalanceCard = ({displayBalance, title, colorTheme}) => {
             <p className="font-bold text-xl">{title}</p>
           </div>
           <div className={`flex justify-center items-center h-full ${theme.innerBg}`}>
-              <p className={`text-4xl ${theme.textColor}`}>$ {displayBalance}</p>
+              <p className={`text-4xl ${theme.textColor}`}>{displayBalance}</p>
           </div>
         </div>
         <div className="flex flex-col py-3 px-2 justify-end">

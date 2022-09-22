@@ -3,21 +3,22 @@ import React from 'react';
 const LoansWindow = ({budgetInputs}) => {
   let creditCardList = [];
   const CREDIT_CARDS = [
-    { iconSource: 'https://img.icons8.com/color/48/000000/visa.png', balance: '0.00' },
-    { iconSource: 'https://img.icons8.com/color/48/000000/mastercard-logo.png', balance: '0.00' },
-    { iconSource: 'https://img.icons8.com/color/48/000000/discover.png', balance: '0.00' }
+    { VISA: { iconSource: 'https://img.icons8.com/color/48/000000/visa.png', balance: '0.00' }},
+    { MASTERCARD: { iconSource: 'https://img.icons8.com/color/48/000000/mastercard-logo.png', balance: '0.00' }},
+    { DISCOVER: { iconSource: 'https://img.icons8.com/color/48/000000/discover.png', balance: '0.00' }}
   ]
-  CREDIT_CARDS.map(item => {
-    creditCardList.push(
-      <div className="flex flex-row justify-between">
-        <div className="flex">
-          <img src={item.iconSource} />
-        </div>
-        <div className="flex self-center">
-          <div>$ {item.balance}</div>
-        </div>
-      </div>
-    );
+  CREDIT_CARDS.forEach(item => {
+    console.log(item);
+    // creditCardList.push(
+    //   <div key={creditCardInfo} className="flex flex-row justify-between">
+    //     <div className="flex">
+    //       <img src={creditCardInfo.iconSource} />
+    //     </div>
+    //     <div className="flex self-center">
+    //       <div>$ {creditCardInfo.balance}</div>
+    //     </div>
+    //   </div>
+    // );
   });
 
   return (

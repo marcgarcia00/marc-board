@@ -32,6 +32,18 @@ const CREDIT_CARD_ICONS = [
 
 const Money = () => {
 
+    // const [ actualBalance, setActualBalance ] = useState(0);
+    // const [ displayBalance, setDisplayBalance ] = useState('');
+
+    const formatBalanceAmount = (amount) => {
+        const formatter = (new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        }));
+        console.log('outgoing amount: ', formatter.format(amount));
+        // setDisplayBalance(formatter.format(amount));
+    }
+
     const balanceCards = [];
     const budgetInputs = [];
 
@@ -43,6 +55,8 @@ const Money = () => {
     ];
 
     BALANCE_CARDS.map(item => {
+        console.log('item', item);
+        // formatBalanceAmount(item.displayBalance);
         balanceCards.push(
             <div className="flex flex-col p-2">
                 <BalanceCard key={`${item.title}-card`} displayBalance={item.balance} title={item.title} colorTheme={item.color}/>
